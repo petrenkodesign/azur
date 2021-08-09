@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>OPi_checkout_translate_fix</name>
+  <code>OPi_checkout_translate_fix</code>
+  <version>1.1</version>
+  <author>Alex Petrenko</author>
+  <link>https://github.com/petrenkodesign</link>
+
+  <file path="catalog/language/uk-ua/extension/payment/cheque.php">
+    <operation>
+      <search><![CDATA[$_['text_title']       = 'Оплата готівкою';]]></search>
+        <add position="replace"><![CDATA[$_['text_title']       = 'Готівкою при отриманні';]]></add>
+    </operation>
+  </file>
+  <file path="catalog/language/ru-ru/extension/payment/cod.php">
+    <operation>
+      <search><![CDATA[$_['text_title'] = 'Картой в магазине';]]></search>
+        <add position="replace"><![CDATA[$_['text_title'] = 'Оплата картой в магазине';]]></add>
+    </operation>
+  </file>
+  <file path="catalog/language/uk-ua/extension/payment/cod.php">
+    <operation>
+      <search><![CDATA[$_['text_title'] = 'Оплата при доставці';]]></search>
+        <add position="replace"><![CDATA[$_['text_title'] = 'Оплата картою в магазині';]]></add>
+    </operation>
+  </file>
+  <file path="catalog/language/ru-ru/extension/payment/liqpay.php">
+    <operation>
+      <search><![CDATA[$_['text_title'] = 'Оплата на карту ПриватБанк';]]></search>
+        <add position="replace"><![CDATA[$_['text_title'] = 'Оплата on-line LiqPay';]]></add>
+    </operation>
+  </file>
+  <file path="catalog/language/uk-ua/extension/payment/liqpay.php">
+    <operation>
+      <search><![CDATA[$_['text_title'] = 'Банківська картка (LiqPay)';]]></search>
+        <add position="replace"><![CDATA[$_['text_title'] = 'Оплата on-line LiqPay';]]></add>
+    </operation>
+  </file>
+  <file path="catalog/language/ru-ru/extension/payment/bank_transfer.php">
+    <operation>
+      <search><![CDATA[$_['text_title']				= 'Безналичный расчет – оплата заказа производится юридическим или физическим лицом на наш расчетный счет в банке с расчетного счета Вашей фирмы или в кассе отделения любого банка.';]]></search>
+        <add position="replace"><![CDATA[$_['text_title']				= 'Перевод на карту ПриватБанк';]]></add>
+    </operation>
+  </file>
+  <file path="catalog/language/uk-ua/extension/payment/bank_transfer.php">
+    <operation>
+      <search><![CDATA[$_['text_title']				= 'Банківській переказ';]]></search>
+        <add position="replace"><![CDATA[$_['text_title']				= ' Переказ на карту ПриватБанк';]]></add>
+    </operation>
+  </file>
+
+</modification>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>OPi_ok_fields_remove_p10-11</name>
+  <code>OPi_ok_fields_remove_p10-11</code>
+  <version>1.1</version>
+  <author>Alex Petrenko</author>
+  <link>https://github.com/petrenkodesign</link>
+
+  <file path="catalog/view/theme/basel/template/extension/module/account.twig">
+    <operation>
+      <search><![CDATA[<a href="{{ download }}">{{ text_download }}</a>]]></search>
+        <add position="replace"><![CDATA[]]></add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/basel/template/extension/module/account.twig">
+    <operation>
+      <search><![CDATA[<a href="{{ recurring }}">{{ text_recurring }}</a>]]></search>
+        <add position="replace"><![CDATA[]]></add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/basel/template/extension/module/account.twig">
+    <operation>
+      <search><![CDATA[<a href="{{ reward }}">{{ text_reward }}</a>]]></search>
+        <add position="replace"><![CDATA[]]></add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/basel/template/extension/module/account.twig">
+    <operation>
+      <search><![CDATA[<a href="{{ return }}">{{ text_return }}</a>]]></search>
+        <add position="replace"><![CDATA[]]></add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/basel/template/extension/module/account.twig">
+    <operation>
+      <search><![CDATA[<a href="{{ transaction }}">{{ text_transaction }}</a>]]></search>
+        <add position="replace"><![CDATA[]]></add>
+    </operation>
+  </file>
+
+  <file path="catalog/view/theme/basel/template/account/account.twig">
+    <operation>
+      <search><![CDATA[<li><a href="{{ download }}">{{ text_download }}</a></li>]]></search>
+        <add position="replace"><![CDATA[]]></add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/basel/template/account/account.twig">
+    <operation>
+      <search><![CDATA[<li><a href="{{ reward }}">{{ text_reward }}</a></li>]]></search>
+        <add position="replace"><![CDATA[]]></add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/basel/template/account/account.twig">
+    <operation>
+      <search><![CDATA[<li><a href="{{ return }}">{{ text_return }}</a></li>]]></search>
+        <add position="replace"><![CDATA[]]></add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/basel/template/account/account.twig">
+    <operation>
+      <search><![CDATA[<li><a href="{{ transaction }}">{{ text_transaction }}</a></li>]]></search>
+        <add position="replace"><![CDATA[]]></add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/basel/template/account/account.twig">
+    <operation>
+      <search><![CDATA[<li><a href="{{ recurring }}">{{ text_recurring }}</a></li>]]></search>
+        <add position="replace"><![CDATA[]]></add>
+    </operation>
+  </file>
+
+</modification>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>OPi_form_fields_fix_p2_3</name>
+  <code>OPi_form_fields_fix_p2_3</code>
+  <version>1.1</version>
+  <author>Alex Petrenko</author>
+  <link>https://github.com/petrenkodesign</link>
+
+  <file path="catalog/language/ru-ru/account/address.php">
+    <operation>
+      <search><![CDATA[$_['text_empty']]]></search>
+        <add position="after" offset="1"><![CDATA[
+        // Add address - simple form (by POi)
+        $_['text_address_add']     = 'Добавить адрес';
+        $_['text_address_edit']    = 'Редактировать адрес';
+        ]]></add>
+    </operation>
+  </file>
+  <file path="catalog/language/uk-ua/account/address.php">
+    <operation>
+      <search><![CDATA[$_['text_empty']]]></search>
+        <add position="after" offset="1"><![CDATA[
+        // Add address - simple form (by POi)
+        $_['text_address_add']     = 'Додати адресу';
+        $_['text_address_edit']    = 'Редагувати адресу';
+        ]]></add>
+    </operation>
+  </file>
+</modification>

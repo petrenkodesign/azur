@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>OPi_SMS_default_reg-log_page</name>
+  <code>OPi_SMS_default_reg-log_page</code>
+  <version>1.1</version>
+  <author>Alex Petrenko</author>
+  <link>https://github.com/petrenkodesign</link>
+
+	<file path="catalog/view/theme/basel/template/account/login.twig">
+	 <operation>
+     <search><![CDATA[<div class="login-area">]]></search>
+      <add position="replace" offset="38"><![CDATA[
+        <div class="d-flex justify-content-center">
+		      <div>
+            <a href="#" class="smsreg button btn-primary btn" data-ref="checkout/simplecheckout" data-url="{{ account }}" data-status="{{ isLogged }}">{{ isLogged ? text_button_reg : text_button_reg_nouser }}</a>
+          </div>
+        </div>
+        <script>
+          $('.smsreg').on("click", function(e){
+            	event.preventDefault();
+            	var status = $(this).attr('data-status');
+             	if(status) {
+            		var url = $(this).attr('data-url');
+            		window.location.href = url;
+            	}
+            	else $('#smspanel2').modal('show');
+          });
+        </script>
+        <style>
+        	.simplecheckout-button-block {
+          		margin:0;
+          		padding: 15px;
+          	}
+          .d-flex {
+            display: flex;
+          }
+          .justify-content-center {
+            justify-content: center;
+          }
+        </style>
+			]]></add>
+		</operation>
+	</file>
+  <file path="catalog/language/uk-ua/account/login.php">
+    <operation>
+      <search><![CDATA[$_['error_approved'] ]]></search>
+        <add position="after"><![CDATA[
+        // Language elements for sms login/register button (by POi)
+        $_['text_button_reg_nouser']         = 'Вхід/реєстрація';
+        $_['text_button_reg']                = 'Особистий кабінет';
+        ]]></add>
+    </operation>
+  </file>
+  <file path="catalog/language/ru-ru/account/login.php">
+    <operation>
+      <search><![CDATA[$_['error_approved'] ]]></search>
+        <add position="after"><![CDATA[
+        // Language elements for sms login/register button (by POi)
+        $_['text_button_reg_nouser']         = 'Вход/регистрация';
+        $_['text_button_reg']                = 'Личный Кабинет';
+        ]]></add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/default/template/extension/module/sms_reg.twig">
+    <operation>
+      <search><![CDATA[location.reload();]]></search>
+        <add position="replace"><![CDATA[
+        // SMS button relocation link (by POi)
+        var ref_url = $('.smsreg').attr('data-ref');
+        if(ref_url) {
+          window.location.href = '/index.php?route='+ref_url;
+        }
+        else {
+          location.reload();
+        }
+        ]]></add>
+    </operation>
+  </file>
+</modification>

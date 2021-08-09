@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>OPi_admin_orders_forms_fields_fix</name>
+  <code>OPi_admin_orders_forms_fields_fix</code>
+  <version>1.1</version>
+  <author>Alex Petrenko</author>
+  <link>https://github.com/petrenkodesign</link>
+
+  <file path="admin/view/template/sale/order_form.twig">
+    <operation>
+      <search index="1"><![CDATA[<div class="form-group required">]]></search>
+        <add position="replace" offset="5"><![CDATA[<!--- Remove lastname (by OPi) -->]]></add>
+    </operation>
+  </file>
+  <file path="admin/language/ru-ru/sale/order.php">
+    <operation>
+      <search><![CDATA[$_['entry_firstname']            = 'Имя, Отчество';]]></search>
+        <add position="replace"><![CDATA[$_['entry_firstname']            = 'ФИО';]]></add>
+    </operation>
+  </file>
+  <file path="admin/language/uk-ua/sale/order.php">
+    <operation>
+      <search><![CDATA[$_['entry_firstname']            = 'Ім’я';]]></search>
+        <add position="replace"><![CDATA[$_['entry_firstname']            = 'ПІБ';]]></add>
+    </operation>
+  </file>
+</modification>
